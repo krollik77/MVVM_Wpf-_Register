@@ -17,7 +17,55 @@
         WindowStartupLocation="CenterScreen" Background="{x:Null}" Foreground="{x:Null}"
         >
     <Grid>
-       
+
+        <Border CornerRadius="20">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.1,0" StartPoint="0.9,1">
+                    <GradientStop Color="#fffE3070" Offset="1"/>
+                    <GradientStop Color="#fffE8704" Offset="0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Border Height="490" VerticalAlignment="Top" Margin="0 0 20 0" CornerRadius="20 0 120 0" >
+
+
+            <Border.Background>
+                <SolidColorBrush Color="Black" Opacity="0.4"/>
+
+            </Border.Background>
+
+        </Border>
+
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Welcome!" Grid.Row="1" FontSize="30" Foreground="Black" FontFamily="Poor Richard" FontWeight="Bold" FontStretch="Expanded" HorizontalAlignment="Right" Margin="0,0,25,0" VerticalAlignment="Top" />
+
+
+            <StackPanel Grid.Row="1" Margin="25,30,25,120">
+               
+                <TextBox x:Name="Login"  materialDesign:HintAssist.Hint=" Enter Login" Foreground="White" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="Transparent" SelectionBrush="#FFD70000" FontFamily="Poor Richard" FontSize="18" />
+                <PasswordBox x:Name="Password"  materialDesign:HintAssist.Hint=" Enter Password" Foreground="White" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" CaretBrush="Transparent" SelectionBrush="#FFD70000" FontFamily="Poor Richard" FontSize="18" />
+            </StackPanel>
+
+            <Border Grid.Row="1" Height="25" VerticalAlignment="Bottom"  CornerRadius="7 " Width="100"  >
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.1,0" StartPoint="0.9,1">
+                        <GradientStop Color="#fffE8704" Offset="0"/>
+                        <GradientStop Color="#fffE3070" Offset="1"/>
+                    </LinearGradientBrush>
+                    
+                </Border.Background>
+                <Button Background="Transparent" BorderBrush="{x:Null}"></Button>
+            </Border>
+        </Grid>
 
     </Grid>
 </Window>
